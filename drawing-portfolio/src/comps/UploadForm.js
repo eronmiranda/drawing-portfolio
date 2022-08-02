@@ -1,0 +1,35 @@
+import React, {useState} from 'react';
+import ProgressBar from './ProgressBar';
+
+const UploadForm = () => {
+  const [file, setFile] = useState(null);
+  const [error, setError] = useState(null);
+
+  const types = ['image/png', 'image/jpg', 'image/jpeg'];
+
+  const changeHandler = (event) => {
+    let selectedFile = event.target.files[0];
+    
+    if(selectedFile && types.includes(selectedFile.type)){
+      setFile(selectedFile);
+      setError('');
+    }
+    else{
+      // reset the file.
+      setFile(null);
+      setError('Please select an image file (png or jpeg).');
+    }
+  }
+  return (
+    <form>
+      <input type="file" onChange={changeHandler}/>
+      <div className="output">
+        { error && <div className="error">{ error }</div>}
+        { file && <div>{ file.name }</div>}
+        { file && <ProgressBar file={file} setFile={setFile}/>}
+      </div>
+    </form>
+  )
+}
+
+export default UploadForm;
