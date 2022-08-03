@@ -5,7 +5,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
 const ImageGrid = ({ setSelectedImg }) => {
-  const { docs } = useFirestore('test-images');
+  const { docs } = useFirestore('images');
   return(
     // <div className="img-grid">
     //   {docs && docs.map(doc => (
