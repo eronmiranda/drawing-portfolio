@@ -1,5 +1,6 @@
 import React from "react";
 import {motion} from 'framer-motion/dist/framer-motion';
+import Zoom from '@mui/material/Zoom';
 
 const Modal = ({ selectedImg, setSelectedImg }) => {
   const handleClick = (event) =>{
@@ -15,11 +16,12 @@ const Modal = ({ selectedImg, setSelectedImg }) => {
       onClick={handleClick}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}>
-      <motion.img 
-        src={selectedImg} 
-        alt="enlarged pic"
-        initial={{ y: "-100vh" }} 
-        animate={{ y: 0 }}/>
+      <Zoom in={selectedImg}>
+        <img 
+          src={selectedImg} 
+          alt="enlarged pic"/>
+      </Zoom>
+
     </motion.div>
   );
 }
