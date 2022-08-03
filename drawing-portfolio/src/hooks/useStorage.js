@@ -13,7 +13,7 @@ const useStorage = (file) => {
     // references
     const storageRef = ref(projectStorage,file.name);
     const uploadTask = uploadBytesResumable(storageRef, file);
-    const collectionRef = collection(projectFirestore,"test-images");
+    const collectionRef = collection(projectFirestore,"images");
 
     uploadTask.on('state_changed', (snapshot) => {
       let percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
