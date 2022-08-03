@@ -13,7 +13,7 @@ const useStorage = (file) => {
     // references
     const storageRef = ref(projectStorage,file.name);
     const uploadTask = uploadBytesResumable(storageRef, file);
-    const collectionRef = collection(projectFirestore,"images");
+    const collectionRef = collection(projectFirestore,"test-images");
 
     uploadTask.on('state_changed', (snapshot) => {
       let percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
@@ -23,8 +23,8 @@ const useStorage = (file) => {
     }, async() => {
         await getDownloadURL(uploadTask.snapshot.ref).then((url) => {
         const createdAt = timeStamp.now();
-        console.log(createdAt);
-        addDoc(collectionRef,{url,createdAt});
+        const fileName = storageRef.name;
+        addDoc(collectionRef,{url,createdAt,fileName});
         setUrl(url);
       });
     });

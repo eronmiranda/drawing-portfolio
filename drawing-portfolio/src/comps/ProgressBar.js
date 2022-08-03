@@ -1,6 +1,8 @@
 import React, {useEffect} from "react";
 import useStorage from "../hooks/useStorage";
-import {motion} from 'framer-motion/dist/framer-motion';
+import Box from '@mui/material/Box';
+import LinearProgressWithLabel from "./LinearProgressWithLabel";
+
 
 const ProgressBar = ({file, setFile}) => {
   const { url, progress } = useStorage(file);
@@ -12,12 +14,10 @@ const ProgressBar = ({file, setFile}) => {
   }, [url,setFile]);
 
   return(
-    <motion.div 
-      className="progress-bar"
-      initial={{ width: 0}}
-      animate={{ width: progress + '%'}}> 
-    </motion.div>
-  )
+    <Box sx={{ width: '100%' }}>
+      <LinearProgressWithLabel value={progress} color="secondary"/>
+    </Box>
+  );
 }
 
 export default ProgressBar;
