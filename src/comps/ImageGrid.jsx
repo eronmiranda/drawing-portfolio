@@ -1,6 +1,6 @@
 import React from 'react';
 import useFirestore from '../hooks/useFirestore';
-import {motion} from 'framer-motion/dist/framer-motion';
+import { motion } from "motion/react"
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
