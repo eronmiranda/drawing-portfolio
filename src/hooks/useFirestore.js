@@ -6,21 +6,21 @@ const useFirestore = (collectionName) => {
   const [docs, setDocs] = useState([]);
 
   useEffect(() => {
-    const collectionRef = collection(projectFirestore,collectionName);
+    const collectionRef = collection(projectFirestore, collectionName);
     const q = query(collectionRef, orderBy("createdAt", "desc"));
 
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
-      const documents =[];
+      const documents = [];
       querySnapshot.forEach((doc) => {
-        documents.push({...doc.data(), id: doc.id});
+        documents.push({ ...doc.data(), id: doc.id });
       });
       setDocs(documents);
     });
 
     return () => unsubscribe();
-  },[collectionName])
+  }, [collectionName]);
 
-  return {docs};
-}
+  return { docs };
+};
 
 export default useFirestore;

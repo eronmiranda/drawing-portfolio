@@ -1,4 +1,4 @@
-import {initializeApp} from "firebase/app";
+import { initializeApp } from "firebase/app";
 import { getFirestore, Timestamp } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
@@ -13,8 +13,7 @@ const firebaseConfig = {
 
   messagingSenderId: "393831752307",
 
-  appId: "1:393831752307:web:f17f2da937009cc9628006"
-
+  appId: "1:393831752307:web:f17f2da937009cc9628006",
 };
 
 const app = initializeApp(firebaseConfig);
@@ -23,4 +22,4 @@ const projectFirestore = getFirestore(app);
 
 const timeStamp = Timestamp;
 
-export {projectStorage, projectFirestore, timeStamp};
+export { projectStorage, projectFirestore, timeStamp };

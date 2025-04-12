@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Title = () => {
   return (
     <div className="title">
@@ -7,7 +5,7 @@ const Title = () => {
       <h2>Customized Digital Stickers</h2>
       <p></p>
     </div>
-  )
-}
+  );
+};
 
 export default Title;
