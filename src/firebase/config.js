@@ -3,17 +3,12 @@ import { getFirestore, Timestamp } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBabDWtv2cSbYLMIDSjqf5HQ0PljCWIPUU",
-
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "marave-portfolio.firebaseapp.com",
-
   projectId: "marave-portfolio",
-
   storageBucket: "marave-portfolio.appspot.com",
-
   messagingSenderId: "393831752307",
-
-  appId: "1:393831752307:web:f17f2da937009cc9628006",
+  appId: "1:393831752307:web:b44065bf78256eb0628006"
 };
 
 const app = initializeApp(firebaseConfig);
