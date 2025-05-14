@@ -1,6 +1,8 @@
 # Digital Art Portfolio
 
-Welcome to the Digital Art Portfolio! This project is a React-based web application designed to showcase a client's digital artwork in an interactive and visually appealing way. As a software engineer with a passion for creativity, I built this portfolio to help my client present their art in a professional and engaging manner.
+Welcome to the Digital Art Portfolio! This project is a simple React-based web application designed to showcase a client's digital artwork in an interactive and visually appealing way.
+
+**Live Demo Here:** [https://simple-art-portfolio.vercel.app](https://simple-art-portfolio.vercel.app)
 
 ## Features
 
@@ -26,20 +28,23 @@ Welcome to the Digital Art Portfolio! This project is a React-based web applicat
 To run this project locally, follow these steps:
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/drawing-portfolio.git
-   cd drawing-portfolio
-   ```
+
+    ```bash
+    git clone https://github.com/your-username/drawing-portfolio.git
+    cd drawing-portfolio
+    ```
 
 2. Install dependencies:
-   ```bash
-   bun install
-   ```
+
+    ```bash
+    bun install
+    ```
 
 3. Start the development server:
-   ```bash
-   bun run dev
-   ```
+
+    ```bash
+    bun run dev
+    ```
 
 4. Open your browser and navigate to `http://localhost:3000`.
 
@@ -49,10 +54,8 @@ To run this project locally, follow these steps:
 - Implement a lightbox feature for viewing artwork in full-screen mode.
 - Integrate a backend to manage artwork dynamically.
 
-## About Me
-
-I am a software engineer with experience in building web applications and a passion for creating visually engaging user experiences. This project reflects my dedication to delivering high-quality solutions tailored to my client's needs.
-
 Feel free to explore the portfolio and reach out with any feedback or suggestions!
 
-# ** STILL WORK IN PROGRESS **
+## Looking for an Enhanced Version?
+
+Explore the upgraded version of this project with additional features and improvements: [Art Portfolio Repository](https://github.com/eronmiranda/art-portfolio). Check it out to see the latest updates and enhancements!
